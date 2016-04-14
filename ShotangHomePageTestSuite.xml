@@ -1,0 +1,12 @@
+<suite name="ShotangHomePageTestSuite" verbose="1">
+
+	<listeners>
+		<listener class-name="com.shotang.test.init.CustomLogs" />
+	</listeners>
+
+	<test name="ShotangHomePageTestSuite">
+		<classes>
+			<class name="com.shotang.homepage.HomePageTest" />
+		</classes>
+	</test>
+</suite>

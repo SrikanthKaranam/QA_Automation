@@ -306,4 +306,64 @@ public class Common extends SetupBase {
 		});
 	}
 
+	/**
+	 * @author Srikanth Karanam
+	 * 
+	 *         This method is used for the enter data into a Text box
+	 */
+	public static void input(By locator, String input, WebDriver driver) {
+		waitForPresenceOfElement(locator, driver);
+		waitForClickable(locator, driver);
+		try {
+			WebElement element = waitForPresenceOfElement(locator, driver);
+			element.sendKeys(input);
+		} catch (NoSuchElementException e) {
+			nosuchElementException(locator.toString(), driver);
+		} catch (TimeoutException e) {
+			timeOutException(locator.toString(), driver);
+		}
+	}
+
+	/**
+	 * @author Srikanth Karanam
+	 * 
+	 *         This method is used for clear an text box before entering any
+	 *         values into it
+	 */
+	public static void clear(By locator, WebDriver driver) {
+		waitForPresenceOfElement(locator, driver);
+		waitForClickable(locator, driver);
+		try {
+			WebElement element = waitForPresenceOfElement(locator, driver);
+			element.clear();
+		} catch (NoSuchElementException e) {
+			nosuchElementException(locator.toString(), driver);
+		} catch (TimeoutException e) {
+			timeOutException(locator.toString(), driver);
+		} catch (WebDriverException e) {
+			Assert.fail("Web driver Exeception " + e.getMessage()
+					+ " while clearing [" + locator + "] At url "
+					+ driver.getCurrentUrl());
+		}
+	}
+
+	/**
+	 * @author Srikanth Karanam
+	 * 
+	 *         This method hovers on a element using Actions
+	 */
+	public static void hoverOnElement(By locator, WebDriver driver) {
+		waitForPresenceOfElement(locator, driver);
+		WebElement hover = null;
+		try {
+			Actions action = new Actions(driver);
+			hover = Common.waitForPresenceOfElement(locator, driver);
+			action.moveToElement(hover).build().perform();
+		} catch (NoSuchElementException e) {
+			nosuchElementException(locator.toString(), driver);
+		} catch (TimeoutException e) {
+			timeOutException(locator.toString(), driver);
+		}
+	}
+
 }

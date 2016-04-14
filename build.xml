@@ -40,7 +40,29 @@
 	<target name="testng-execution" depends="compile">
 		<mkdir dir="${testng-report-dir}" />
 		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
-			<xmlfileset dir="${basedir}" includes="ShotangAutomation.xml" />
+			<xmlfileset dir="${basedir}" includes="ShotangQaAutomation.xml" />
 		</testng>
 	</target>
+
+	<target name="ShotangHomePageTestSuite" depends="compile">
+		<mkdir dir="${testng-report-dir}" />
+		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
+			<xmlfileset dir="${basedir}" includes="ShotangHomePageTestSuite.xml" />
+		</testng>
+	</target>
+
+	<target name="ShotangRetailersFlowTestSuite" depends="compile">
+		<mkdir dir="${testng-report-dir}" />
+		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
+			<xmlfileset dir="${basedir}" includes="ShotangRetailersFlowTestSuite.xml" />
+		</testng>
+	</target>
+
+	<target name="ShotangStaticPagesTestSuite" depends="compile">
+		<mkdir dir="${testng-report-dir}" />
+		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
+			<xmlfileset dir="${basedir}" includes="ShotangStaticPagesTestSuite.xml" />
+		</testng>
+	</target>
+
 </project>

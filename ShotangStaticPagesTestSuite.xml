@@ -1,0 +1,13 @@
+<suite name="ShotangStaticPagesTestSuite" verbose="1">
+
+	<listeners>
+		<listener class-name="com.shotang.test.init.CustomLogs" />
+	</listeners>
+
+	<test name="ShotangStaticPages">
+		<classes>
+			<class name="com.shotang.staticpages.StaticPageTest" />
+		</classes>
+	</test>
+
+</suite>

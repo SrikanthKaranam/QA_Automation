@@ -22,6 +22,8 @@ public class StaticPageMethods {
 	 */
 	public void clickOnSellOnShotangLinkOnHomePage() {
 		Common.click(XPATH_SELL_ON_SHOTANG, driver);
+		System.out
+				.println("Clicked on the 'Sell On Shotang Link' On Home Page");
 	}
 
 	/**
@@ -46,7 +48,7 @@ public class StaticPageMethods {
 	 */
 	public void checkSubmitButtonAndCallUsText() {
 		Common.waitForPresenceOfElement(XPATH_SUBMIT, driver);
-		System.out.println("Verified 'Submit' Button Is Present");
+		System.out.println("Verified the 'Submit' Button is Present");
 		Common.assertTextUsingEquals(XPATH_CALL_US, "+91-886-120-9858", driver);
 		System.out.println("Verified '+91-886-120-9858' Text Is Present");
 	}
@@ -84,6 +86,7 @@ public class StaticPageMethods {
 	 */
 	public void clickOnAboutUsLinkOnHomePage() {
 		Common.click(XPATH_ABOUT_US, driver);
+		System.out.println("Clicked on the 'About us link' on Home page");
 	}
 
 	/**
@@ -171,6 +174,8 @@ public class StaticPageMethods {
 	 */
 	public void clickOnContactUsLinkOnHomePage() {
 		Common.click(XPATH_CONTACT_US, driver);
+		System.out.println("Clicked on the 'Contact Us link' on Home page");
+
 	}
 
 	/**
@@ -238,9 +243,11 @@ public class StaticPageMethods {
 	 */
 	public void verifyElementsOnWeAreHiringPage(String mainWindowhandle) {
 		Common.rightClickAndOpenInNewTab(XPATH_WE_ARE_HIRING, driver);
+		System.out
+				.println("Right clicked and opened the 'we are hiring' page on new tab");
 		Common.waitForVisibilityOfElement(CSS_COME_JOIN_US, driver);
 		Common.assertTextUsingEquals(CSS_COME_JOIN_US, "Come join us!", driver);
-		System.out.println("Verified 'Come join us!' Text Is Present");
+		System.out.println("Verified 'Come join us!' Text is Present");
 		Common.waitForPresenceOfElement(XPATH_TEXT_ELEMENT_OF_COME_JOIN_US,
 				driver);
 		System.out
@@ -249,5 +256,6 @@ public class StaticPageMethods {
 		System.out.println("Verified 'Submit' Button Is Present");
 		Common.closeExtraWindowAndSwitchBackToParentWindow(mainWindowhandle,
 				driver);
+		System.out.println("Closing the 'we are hiring page'");
 	}
 }
