@@ -183,9 +183,9 @@ public class RetailersFlowPageLocaters {
 			.xpath(".//*[@id='content']/div[3]/div[1]/div/a[3]");
 
 	public static final By XPATH_SELECT_DISTRIBUTOR_TYPE_AS_TEST_SELLER_FOR_TELECOM_ACCESSERIES = By
-			.xpath("//option[@value='40_10737_55']");
-	public static final By XPATH_SELECT_WHOLESALER_AS_SS_ENTERPRISES_FOR_TELECOME_ACCESSORIES = By
-			.xpath("//option[@value='35_6903_55']");
+			.xpath("//option[@value='40_10746_55']");
+	public static final By XPATH_SELECT_WHOLESALER_AS_SS_ENTERPRISES_FOR_TELECOME_ACCESSORIES_AS_LIGHTING1 = By
+			.xpath("//option[@value='35_6912_55']");
 
 	// ************************** My Wallet Page*******************************
 	public static final By XPATH_MY_WALLET_LINK = By
@@ -418,8 +418,8 @@ public class RetailersFlowPageLocaters {
 			.xpath(".//*[@id='content']/div[3]/div[1]/div/a[2]");
 	public static final By XPATH_DISTRIBUTOR_TEXT = By
 			.xpath("//td[text()='Distributor:']");
-	public static final By XPATH_TEST_SELLERS_TEXT_ON_CELKON = By
-			.xpath("//td[text()='test seller']");
+	public static final By XPATH_TEST_DISTRIBUTOR_TEXT_ON_CELKON = By
+			.xpath("//td[text()='test distributor']");
 	public static final By XPATH_BLACK_QUANTITY_FOR_DISRTIBUTOR = By
 			.xpath(".//*[@id='products']/div[2]/table/tbody/tr/td[4]/input");
 

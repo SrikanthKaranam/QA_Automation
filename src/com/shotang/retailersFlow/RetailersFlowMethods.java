@@ -325,11 +325,10 @@ public class RetailersFlowMethods {
 	 *         This method is used to select the Wholesaler Type and Quantity
 	 *         Type For Nokia Brand
 	 */
-	public void selectTheWholesalerAndQuantityTypeForNokiaBrand() {
+	public void selectTheWholesalerAndQuantityTypeForNokiaBrandAs105dual() {
 		Common.click(XPATH_SELECT_WHOLESALLER_TYPE_AS_AM_MOBILES_FOR_NOKIA,
 				driver);
-		System.out
-				.println("Selected the sale type Wholesaler as SS Electronics");
+		System.out.println("Selected the sale type Wholesaler as AM Mobiles");
 		Common.click(XPATH_SELECT_QUANTITY, driver);
 		System.out.println("clicked on the num of quantity");
 		Common.input(XPATH_SELECT_QUANTITY, "5", driver);
@@ -441,7 +440,7 @@ public class RetailersFlowMethods {
 		clickOnOrderByBrands();
 		clickOnNokiaBrand();
 		verifyNokiaPageElements();
-		selectTheWholesalerAndQuantityTypeForNokiaBrand();
+		selectTheWholesalerAndQuantityTypeForNokiaBrandAs105dual();
 		clickOnAddToCart();
 		clickOnViewToCart();
 		clickOnCODAndPlacedTheOrderAndVerifyTheOrderedMessage();
@@ -514,7 +513,7 @@ public class RetailersFlowMethods {
 	 */
 	public void selectTheWholesalerAndQuantityTypeForTelecomAccesseries() {
 		Common.click(
-				XPATH_SELECT_WHOLESALER_AS_SS_ENTERPRISES_FOR_TELECOME_ACCESSORIES,
+				XPATH_SELECT_WHOLESALER_AS_SS_ENTERPRISES_FOR_TELECOME_ACCESSORIES_AS_LIGHTING1,
 				driver);
 		System.out
 				.println("Selected the sale type Wholesaler as SS Electronics");
@@ -651,7 +650,7 @@ public class RetailersFlowMethods {
 	 *         This method is used for click the search box and enterning the
 	 *         product name and selecting the product as C180(Celkon)
 	 */
-	public void clickOnSearchBoxEnterTheProductNameAndSelectProductAsCelkon() {
+	public void clickOnSearchBoxEnterTheProductNameAndSelectProductAsCelkon180() {
 		Common.click(XPATH_SEARCH_BOX, driver);
 		System.out.println("clicking the Search box");
 		Common.input(XPATH_SEARCH_BOX, "C180(Celkon)", driver);
@@ -679,9 +678,9 @@ public class RetailersFlowMethods {
 		Common.assertTextUsingEquals(XPATH_DISTRIBUTOR_TEXT, "Distributor:",
 				driver);
 		System.out.println("Verifed the Distributor: Text is present");
-		Common.assertTextUsingEquals(XPATH_TEST_SELLERS_TEXT_ON_CELKON,
-				"test seller", driver);
-		System.out.println("Verifed the test seller Text is present");
+		Common.assertTextUsingEquals(XPATH_TEST_DISTRIBUTOR_TEXT_ON_CELKON,
+				"test distributor", driver);
+		System.out.println("Verifed the test distributor Text is present");
 		Common.assertTextUsingEquals(XPATH_BLACK_TEXT, "Black:", driver);
 		System.out.println("Verified The Black, Text is Present");
 	}

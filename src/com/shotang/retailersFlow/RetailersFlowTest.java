@@ -120,7 +120,8 @@ public class RetailersFlowTest extends SetupBase {
 		retailersFlowMethods.clickOnOrderByBrands();
 		retailersFlowMethods.clickOnNokiaBrand();
 		retailersFlowMethods.verifyNokiaPageElements();
-		retailersFlowMethods.selectTheWholesalerAndQuantityTypeForNokiaBrand();
+		retailersFlowMethods
+				.selectTheWholesalerAndQuantityTypeForNokiaBrandAs105dual();
 		retailersFlowMethods.clickOnAddToCart();
 		retailersFlowMethods.clickOnViewToCart();
 		retailersFlowMethods
@@ -207,7 +208,7 @@ public class RetailersFlowTest extends SetupBase {
 		retailersFlowMethods.enterTheCorrectEmailIdAndPasswordFields();
 		retailersFlowMethods.clickOnGoButtonOnSignInPage();
 		retailersFlowMethods
-				.clickOnSearchBoxEnterTheProductNameAndSelectProductAsCelkon();
+				.clickOnSearchBoxEnterTheProductNameAndSelectProductAsCelkon180();
 		retailersFlowMethods
 				.verifyCelkonProductPageElementsH1TextBreadcrumbAndPageElements();
 		retailersFlowMethods.selectQuantityTypeAndClickOnAddToCart();
