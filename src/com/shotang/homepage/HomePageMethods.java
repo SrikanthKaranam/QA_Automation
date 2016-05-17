@@ -109,7 +109,7 @@ public class HomePageMethods {
 	 */
 	public void checkFooterTextElementsOnHomePage() {
 		Common.scrollTillVisibilityOfAnElement(XPATH_COPYRIGHT, driver);
-		Common.assertTextUsingEquals(XPATH_COPYRIGHT, "@ 2015 shotang.com",
+		Common.assertTextUsingEquals(XPATH_COPYRIGHT, "© 2016 shotang.com",
 				driver);
 		System.out.println("Verified Copyright Symbol Text On Footer");
 		Common.assertTextUsingEquals(XPATH_TERMS_AND_CONDITIONS,
